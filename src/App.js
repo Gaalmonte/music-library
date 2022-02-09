@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Gallery from './components/Gallery'
 import SearchBar from './components/Searchbar'
@@ -28,9 +28,9 @@ const renderGallery = () => {
   if(data){
     return(
       <div>
-        <suspense fallback={<Spinner/>}>
+        <Suspense fallback={<Spinner/>}>
           <Gallery data={data}/>
-        </suspense>
+        </Suspense>
       </div>
     )
   }
