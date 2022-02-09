@@ -9,7 +9,7 @@ import Spinner from "./components/Spinner";
 
 function App() {
 let [searchTerm, setSearchTerm] = useState('')
-let [data, setData] = useState([])
+let [data, setData] = useState(null)
 let [message, setMessage] = useState('Search for Music!')
 
 
